@@ -4,7 +4,8 @@ This is a basic project structure which helps you to start building your own RES
 
 # Features
 - Routing, Middleware, Manage Request and Response with [Express](https://expressjs.com/)
-- CRUD operations & Data models with [Mongoose](https://mongoosejs.com/)
+- **CRUD** operations with **Book** example
+- Data models with [Mongoose](https://mongoosejs.com/)
 - Data validation & sanitization with [Joi](https://joi.dev/api/)
 - Authentication & Authorization with [JWT](https://jwt.io/): login and signup
 - Error handling
