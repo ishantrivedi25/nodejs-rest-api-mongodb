@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "63a30350-f9d8-4015-809f-647b4695893c",
+		"name": "Book-Club",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ishan.trivedi@coditas.com\",\r\n    \"password\":\"Admin@990\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/auth/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Ishan\",\r\n    \"lastName\":\"Trivedi\",\r\n    \"email\":\"ishan.trivedi@coditas.com\",\r\n    \"password\":\"Admin@990\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/auth/signup",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Book Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3Rva2VuIjoiNjFiYjEzZGY3Njk2NTNiNDNmYWRmOGZhIiwiaWF0IjoxNjM5NjgxNDkyLCJleHAiOjE2Mzk3Njc4OTJ9.YkEsDLFTX7ZnpsJ0d0WTMCrIANMq3MkEGPTCxzbkfFQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/book/61bb8f84ca3d618326db2897",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"book",
+								"61bb8f84ca3d618326db2897"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3Rva2VuIjoiNjFiYjEzZGY3Njk2NTNiNDNmYWRmOGZhIiwiaWF0IjoxNjM5NjgxNDkyLCJleHAiOjE2Mzk3Njc4OTJ9.YkEsDLFTX7ZnpsJ0d0WTMCrIANMq3MkEGPTCxzbkfFQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isbn\":\"97815932\",\r\n    \"title\":\"Eloquent JavaScript, Third Edition\",\r\n    \"author\":\"Marijn Haverbeke\",\r\n    \"description\":\"New Book\",\r\n    \"published\":\"2018-12-04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/book",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List All Books",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3Rva2VuIjoiNjFiYjEzZGY3Njk2NTNiNDNmYWRmOGZhIiwiaWF0IjoxNjM5NzE1MTY2LCJleHAiOjE2Mzk4MDE1NjZ9.rXsgwrLUFRGtGfhFI-HkKlBYVofOW1juXokwuv2POR8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/book",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3Rva2VuIjoiNjFiYjEzZGY3Njk2NTNiNDNmYWRmOGZhIiwiaWF0IjoxNjM5NjgxNDkyLCJleHAiOjE2Mzk3Njc4OTJ9.YkEsDLFTX7ZnpsJ0d0WTMCrIANMq3MkEGPTCxzbkfFQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"ABC\",\r\n    \"isbn\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/book/61bb8f84ca3d618326db2896",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"book",
+								"61bb8f84ca3d618326db2896"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3Rva2VuIjoiNjFiYjEzZGY3Njk2NTNiNDNmYWRmOGZhIiwiaWF0IjoxNjM5NzE1MTY2LCJleHAiOjE2Mzk4MDE1NjZ9.rXsgwrLUFRGtGfhFI-HkKlBYVofOW1juXokwuv2POR8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/book/61bb8f84ca3d618326db2897",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"book",
+								"61bb8f84ca3d618326db2897"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
