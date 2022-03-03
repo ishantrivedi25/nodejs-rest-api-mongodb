@@ -9,9 +9,9 @@ This is a basic project structure which helps you to start building your own RES
 - Data validation & sanitization with [Joi](https://joi.dev/api/)
 - Authentication & Authorization with [JWT](https://jwt.io/): login and signup
 - Error handling
-- Enviroment Varaibles
+- Environment Variables
 - Pre-defined response structures with proper status codes
-- Included CORS & Data Encyption
+- Included CORS & Data Encryption
 - Included API collection for Postman
 
 ## Project structure
